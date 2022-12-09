@@ -1,16 +1,13 @@
-import axios from 'axios';
-import React from 'react'
-import {useState, useEffect} from 'react'
+import axios from "axios";
+import React from "react";
+import { useState, useEffect } from "react";
 
+//fetch Course details
+const url = `https://private-e05942-courses22.apiary-mock.com/courses/`;
 
-  //fetch Course details
-  const url = `https://private-e05942-courses22.apiary-mock.com/courses/`;
-
-const CourseDetails = ({selectedCourse, setSelectedCourse}) => {
+const CourseDetails = ({ selectedCourse, setSelectedCourse }) => {
   const [courseDetails, setCourseDetails] = useState([]);
   const [loading, setLoading] = useState(false);
-
-  
 
   useEffect(() => {
     const fetchCourseDetails = async () => {
@@ -23,13 +20,30 @@ const CourseDetails = ({selectedCourse, setSelectedCourse}) => {
       }
     };
 
-    fetchCourseDetails()
-  }, [selectedCourse])
-  return (
-    <div>
-      {loading ? courseDetails.description : "fetchinggg"}
-    </div>
-  )
-}
+    fetchCourseDetails();
+  }, [selectedCourse]);
 
-export default CourseDetails
+  // Convert start dates to more readable format
+ 
+  const startDates = (courseDetails.start_dates || []).map((date) => {
+    const dateObject = new Date(date);
+    return dateObject.toLocaleDateString("en-GB", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  });
+
+  return <div>{loading ? 
+    <>
+    <div>
+      {courseDetails.description}
+      </div>
+      <div>Next Start Date</div>
+      <div>{startDates.join(' | ')}</div>
+      </> : "fetchinggg"}
+      </div>;
+};
+
+export default CourseDetails;
