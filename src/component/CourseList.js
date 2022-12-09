@@ -5,10 +5,10 @@ import axios from "axios";
 //API URL
 const url = "https://private-e05942-courses22.apiary-mock.com/courses";
 
-const CourseList = ({setSelectedCourse}) => {
+const CourseList = ({ setSelectedCourse }) => {
   const [courses, setCourses] = useState([]);
 
-  //render api when the page loads
+  //render courses when the page loads
 
   useEffect(() => {
     //fetchAPI
@@ -25,18 +25,21 @@ const CourseList = ({setSelectedCourse}) => {
 
   //handle dropdown when selected
   const handleDropDown = (e) => {
-    setSelectedCourse(e.target.value)
-  }
+    setSelectedCourse(e.target.value);
+  };
 
-    /* console.log(courses);  */
+  /* console.log(courses);  */
 
   return (
     <div>
-       <h1>CareerFoundry Courses</h1>
-      <select onChange={handleDropDown}>
-        <option value="">Select a course</option>
+      <h1>CareerFoundry Courses</h1>
+      
+      <select id="cars" onChange={handleDropDown}>
+      <option value="" placeholder="Select a course">Select a course</option>
         {courses.map((course) => (
-          <option key={course.slug} value={course.slug}> {course.title}</option>
+          <option key={course.slug} value={course.slug}>
+            {course.title}
+          </option>
         ))}
       </select>
     </div>
