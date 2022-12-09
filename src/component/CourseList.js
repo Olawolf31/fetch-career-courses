@@ -3,16 +3,16 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 //API URL
-let url = "https://private-e05942-courses22.apiary-mock.com/courses";
+const url = "https://private-e05942-courses22.apiary-mock.com/courses";
 
-const CourseList = ({setSelected}) => {
+const CourseList = ({setSelectedCourse}) => {
   const [courses, setCourses] = useState([]);
 
   //render api when the page loads
 
   useEffect(() => {
     //fetchAPI
-    const fetchApi = async () => {
+    const fetchCourses = async () => {
       try {
         const response = await axios.get(url);
         setCourses(response.data);
@@ -20,16 +20,16 @@ const CourseList = ({setSelected}) => {
         console.log(error);
       }
     };
-    fetchApi();
+    fetchCourses();
   }, []);
 
   //handle dropdown when selected
   const handleDropDown = (e) => {
-    setSelected(e.target.value)
+    setSelectedCourse(e.target.value)
   }
 
-   /* console.log(courseList); */
-   
+    /* console.log(courses);  */
+
   return (
     <div>
        <h1>CareerFoundry Courses</h1>

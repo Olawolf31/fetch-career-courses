@@ -1,14 +1,15 @@
 import { useState } from "react";
 import CourseList from "./component/CourseList"
+import CourseDetails from "./component/CourseDetails";
 
 function App() {
 
-  const [selectedCourse, setSelectedCourse] = useState(null)
+  const [selectedCourse, setSelectedCourse] = useState("")
 
   return (
     <div>
-      <CourseList selectedCourse ={selectedCourse} setSelectedCourse={setSelectedCourse}/>
-      
+      {!selectedCourse && <CourseList selectedCourse ={selectedCourse} setSelectedCourse={setSelectedCourse}/>}
+      {selectedCourse && <CourseDetails selectedCourse ={selectedCourse} setSelectedCourse={setSelectedCourse}/>}
     </div>
   );
 }
