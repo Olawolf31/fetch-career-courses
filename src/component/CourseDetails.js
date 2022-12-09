@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
 
-//fetch Course details
+//Course details API URL
 const url = `https://private-e05942-courses22.apiary-mock.com/courses/`;
 
 const CourseDetails = ({ selectedCourse, setSelectedCourse }) => {

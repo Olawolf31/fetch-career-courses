@@ -28,13 +28,13 @@ const CourseList = ({ setSelectedCourse }) => {
     setSelectedCourse(e.target.value);
   };
 
-  /* console.log(courses);  */
+  
 
   return (
     <div className="container">
       <h1>CareerFoundry Courses</h1>
 
-      <select id="cars" onChange={handleDropDown}>
+      <select onChange={handleDropDown}>
         <option value="" placeholder="Select a course">
           Select a course
         </option>
