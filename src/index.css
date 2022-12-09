@@ -1,13 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #223c50;
+  font-family: "Cabin Condensed", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+h1, h3 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+}
+
+select {
+  width: 100%;
+  height: 50px;
+
+  font-size: 16px;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  background: linear-gradient(to bottom, #cdcdcd 0%, #c2dfff 100%);
+}
+
+option {
+  font-size: 16px;
+  color: #000;
+}
+
+.course__details__container {
+  width: 50%;
+  margin: 30px auto;
+  text-align: left;
+}
+.course__description {
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.course__start__dates {
+  border-left: 10px solid #fff;
+  font-weight: 200;
+}
+
+.course__start__dates__text {
+  font-size: 20px;
+  margin-left: 20px;
+  color: #fff;
+}
+
+.course__start__dates__text__list {
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 8px;
+  color: #fff;
+}
+
+.course__price {
+  border-radius: 4px;
+
+  text-align: center;
+  background: #fff;
+  margin-top: 30px;
+  padding: 4px 40px 24px 40px;
+  text-align: left;
+  width: 50%;
+}
+
+.course__price__label__container {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.course__price__label__one {
+  padding: 5px 10px;
+  background-color: #f9728b;
+  color: #fff
+}
+
+.course__price__label__two {
+  padding: 5px 10px;
+  background-color: rgb(4, 120, 4);
+  color: #fff
+}
+
+.course__price__divider {
+  color: gray;
+}
+
+.course__price h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000
+}
+
+.course__price h4 {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.course__price p {
+  font-size: 18px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.course__price button {
+  background-color: #000;
+  display: block;
+  width: 100%;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container__back__button {
+  width: 50%;
+  margin: 30px auto;
+  text-align: left;
+}
+
+.back__button {
+  background: linear-gradient(to right, #f9728b, #1a6e82);
+  color: white;
+  border: none;
+  padding: 15px 20px 15px 20px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: 0.3s ease;
+  width: 20%;
+  margin: auto;
+  cursor: pointer;
+}
+
+.back__button:hover {
+  background: #fd6053;
+}
+
+svg {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  font-size: 800;
+}
+
+/* mobile */
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .course__details__container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .course__price {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 480px) and (max-width: 960px) {
+  .container__back__button {
+    width: 80%;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 480px) and (max-width: 960px) {
+  .back__button {
+    width: 80%;
+  }
+}
+
+/* tablet */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .course__details__container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .course__price {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .container__back__button {
+    width: 50%;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .back__button {
+    width: 50%;
+  }
 }

@@ -31,11 +31,13 @@ const CourseList = ({ setSelectedCourse }) => {
   /* console.log(courses);  */
 
   return (
-    <div>
+    <div className="container">
       <h1>CareerFoundry Courses</h1>
-      
+
       <select id="cars" onChange={handleDropDown}>
-      <option value="" placeholder="Select a course">Select a course</option>
+        <option value="" placeholder="Select a course">
+          Select a course
+        </option>
         {courses.map((course) => (
           <option key={course.slug} value={course.slug}>
             {course.title}

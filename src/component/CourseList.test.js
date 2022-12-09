@@ -1,5 +1,4 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom/extend-expect";
 import CourseList from "./CourseList";
 import axios from "axios";
@@ -15,12 +14,12 @@ describe("CourseList component", () => {
 
     //Act
     const selectElement = screen.getByPlaceholderText("Select a course");
-
     fireEvent.change(selectElement, { target: { value: "course1" } });
 
     //Assert
     expect(selectElement.value).toBe("course1");
   });
+
   it("renders CareerFoundry Courses", () => {
     //Arrange
     render(<CourseList />);
