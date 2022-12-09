@@ -15,8 +15,8 @@ const CourseDetails = ({ selectedCourse, setSelectedCourse }) => {
     const fetchCourseDetails = async () => {
       try {
         const response = await axios.get(`${url}${selectedCourse}`);
-        setCourseDetails(response.data);
         setLoading(true);
+        setCourseDetails(response.data);
       } catch (error) {
         console.log(error);
       }
@@ -30,13 +30,11 @@ const CourseDetails = ({ selectedCourse, setSelectedCourse }) => {
         );
 
         setCurrency(userLocation.data.currency.code);
-        setLoading(true);
       } catch (error) {
         console.log(error);
       }
-      
     };
-    
+
     fetchCourseDetails();
     fetchGeoLocation();
   }, [selectedCourse]);
