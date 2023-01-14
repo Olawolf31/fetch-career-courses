@@ -12,7 +12,8 @@ body {
   text-align: center;
 }
 
-h1, h3 {
+h1,
+h3 {
   font-size: 50px;
   font-weight: bold;
   color: #fff;
@@ -81,17 +82,19 @@ option {
   margin-top: 30px;
 }
 
-.course__price__label__one {
-  padding: 5px 10px;
+.course__price__label__container > :first-child{
   background-color: #f9728b;
-  color: #fff
 }
 
-.course__price__label__two {
-  padding: 5px 10px;
-  background-color: rgb(4, 120, 4);
-  color: #fff
+.course__price__label__container > :last-child{
+  background-color:rgb(4, 120, 4);
 }
+
+.course__price__label {
+  padding: 5px 10px;
+  color: #fff;
+}
+
 
 .course__price__divider {
   color: gray;
@@ -100,7 +103,7 @@ option {
 .course__price h3 {
   font-size: 30px;
   font-weight: 700;
-  color: #000
+  color: #000;
 }
 
 .course__price h4 {
@@ -164,33 +167,23 @@ svg {
 @media only screen and (max-width: 480px) {
   .container {
     width: 80%;
-  }
-}
-
-@media only screen and (max-width: 480px) {
+  },
   .course__details__container {
     width: 80%;
-  }
-}
-
-@media only screen and (max-width: 480px) {
+  },
   .course__price {
     width: 80%;
-  }
-}
-
-@media only screen and (max-width: 480px) and (max-width: 960px) {
+  },
   .container__back__button {
     width: 80%;
     text-align: left;
-  }
-}
-
-@media only screen and (max-width: 480px) and (max-width: 960px) {
+  },
   .back__button {
     width: 80%;
   }
+
 }
+
 
 /* tablet */
 
@@ -198,28 +191,16 @@ svg {
   .container {
     width: 100%;
   }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .course__details__container {
     width: 80%;
   }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .course__price {
     width: 80%;
   }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .container__back__button {
     width: 50%;
     text-align: left;
   }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .back__button {
     width: 50%;
   }

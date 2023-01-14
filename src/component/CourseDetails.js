@@ -98,8 +98,8 @@ const CourseDetails = ({ selectedCourse, setSelectedCourse }) => {
 
           <div className="course__price">
             <div className="course__price__label__container">
-              <div className="course__price__label__one">Best Value</div>
-              <div className="course__price__label__two">10% off</div>
+              <div className="course__price__label">Best Value</div>
+              <div className="course__price__label">10% off</div>
             </div>
             <h3>
               {currency === "USD" ? "$" : "€"} {priceAmount}
